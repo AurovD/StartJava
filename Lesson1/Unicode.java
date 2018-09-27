@@ -1,7 +1,11 @@
-class Unicode {
+public class Unicode {
+
     public static void main (String [] args) { 
-        for (char Operation = 33;  Operation<= 126; Operation++) {
-        System.out.println (Operation);
-    }
+
+    	char sybmol_number = 33; 
+
+    	for (sybmol_number =33; sybmol_number <=126; sybmol_number++) {
+        	System.out.println (sybmol_number);
+    	}
     }
 }
