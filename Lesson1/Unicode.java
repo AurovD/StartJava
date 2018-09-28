@@ -2,10 +2,10 @@ public class Unicode {
 
     public static void main (String [] args) { 
 
-    	char sybmol_number = 33; 
+    	char symbol_number = 33; 
 
-    	for (sybmol_number =33; sybmol_number <=126; sybmol_number++) {
-        	System.out.println (sybmol_number);
+    	for (symbol_number =33; symbol_number <=126; symbol_number++) {
+        	System.out.println (symbol_number);
     	}
     }
 }
