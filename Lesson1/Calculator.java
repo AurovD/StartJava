@@ -9,7 +9,7 @@ public class Calculator {
             int result;
 
         if (operation == '^') {
-        	    System.out.print("Input number: ");
+        	    System.out.print("Input number:");
 		        int number1 = input.nextInt();
 
         	    result = number1 * number1; 
