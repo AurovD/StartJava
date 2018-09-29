@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Random { 
 
     public static void main(String args[]){
-		int randomNumber1 = 67;
+		int randomNumber1  = 67;
 		int number = 0;
 
 		System.out.println("Guess number!!!");
