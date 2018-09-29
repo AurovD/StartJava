@@ -1,11 +1,10 @@
 public class Unicode {
 
-    public static void main (String [] args) { 
+    public static void main (String [] args) {
+    	char symbolNumber = 33; 
 
-    	char symbol_number = 33; 
-
-    	for (symbol_number =33; symbol_number <=126; symbol_number++) {
-        	System.out.println (symbol_number);
+    	for (symbolNumber = 33; symbolNumber <= 126; symbolNumber++) {
+        	System.out.println(symbolNumber);
     	}
     }
 }
