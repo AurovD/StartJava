@@ -18,7 +18,7 @@ public class Guess {
 				} else {
 					System.out.println("The number is larger.");
 				}
-		}
+			}
 		System.out.print ("You have guessed.");
    }
 }
