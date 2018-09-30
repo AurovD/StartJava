@@ -35,9 +35,9 @@ public class Calculator {
 			        	   result = number1 % number2; 
 			               		 System.out.println(result);
             			} else {
-            	System.out.println("Error!!!");
-            }
-        }
+            			System.out.println("Error!!!");
+            			}
+        		}
     }
 
 }
