@@ -19,24 +19,24 @@ public class Calculator {
 					int number1 = input.nextInt();
 					int number2 = input.nextInt();
             			
-            			if (operation == '+') {
-        	   			   result = number1 + number2; 
-			               		System.out.println(result);
-			            } else if (operation == '-') {
-			        	   result = number1 - number2; 
-			               		System.out.println(result);
-			            } else if (operation == '*') {
-			        	   result = number1 * number2; 
-			              		 System.out.println(result);
-			            } else if (operation == '/') {
-			        	   result = number1 / number2;
-			               		 System.out.println(result); 
-			            } else if (operation == '%') {
-			        	   result = number1 % number2; 
-			               		 System.out.println(result);
-            			} else {
+            		if (operation == '+') {
+        	   			result = number1 + number2; 
+			               	System.out.println(result);
+			        } else if (operation == '-') {
+			        	result = number1 - number2; 
+			               	System.out.println(result);
+			        } else if (operation == '*') {
+			        	result = number1 * number2; 
+			              	System.out.println(result);
+			        } else if (operation == '/') {
+			        	result = number1 / number2;
+			               	System.out.println(result); 
+			        } else if (operation == '%') {
+			        	result = number1 % number2; 
+			                System.out.println(result);
+            		} else {
             			System.out.println("Error!!!");
-            			}
+            		}
         		}
     }
 
