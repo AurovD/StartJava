@@ -34,7 +34,7 @@ public class Calculator {
 			        } else if (operation == '%') {
 			        	result = number1 % number2; 
 			                System.out.println(result);
-            		} else {
+                    } else {
             			System.out.println("Error!!");
             		}
         		}
