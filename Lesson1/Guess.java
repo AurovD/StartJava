@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Guess { 
     public static void main(String args[]) {
-    	Scanner input = new Scanner(System.in);
+    	        Scanner input = new Scanner(System.in);
 		int randomNumber = 67;
 		int userNumber = 0;
 
 		System.out.println("Guess number!!!");
 			while (randomNumber != number) {
-        		System.out.print("Input number: ");
+        		        System.out.print("Input number: ");
 				userNumber = input.nextInt();
 
 				if (number == randomNumber) {
