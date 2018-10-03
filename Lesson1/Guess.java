@@ -13,7 +13,7 @@ public class Guess {
 
 	    if (userNumber == randomNumber) {
                 System.out.println("Well done!!");
-            } else if (userNumber > randomNumber) {
+           } else if (userNumber > randomNumber) {
                 System.out.println("The number is smaller.");
 	    } else {
                 System.out.println("The number is larger.");
