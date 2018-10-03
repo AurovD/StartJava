@@ -9,31 +9,28 @@ public class Calculator {
 
         System.out.print("Choose operation (+, -, *, /, ^, %): ");
         char operation = input.next().charAt(0);
-        int result;
 
         System.out.print("Input second number: ");
         int number2 = input.nextInt();
-            			
+        int count = 1;
+        int degree = number1;
+        
         if (operation == '+') {
-            result = number1 + number2; 
-            System.out.println(result);
+            System.out.println(number1 + number2);
         } else if (operation == '-') {
-            result = number1 - number2; 
-            System.out.println(result);
+            System.out.println(number1 - number2);
         } else if (operation == '*') {
-            result = number1 * number2; 
-            System.out.println(result);
+            System.out.println(number1 * number2);
         } else if (operation == '/') {
-            result = number1 / number2;
-            System.out.println(result); 
+            System.out.println(number1 / number2); 
         } else if (operation == '%') {
-            result = number1 % number2; 
-            System.out.println(result);
+            System.out.println(number1 % number2);
         } else if (operation == '^') {
-            result = number1 * number1; 
-            System.out.println(result);
-            result = number2 * number2; 
-            System.out.println(result);
+            while (count != number2) {
+                degree = degree * number1;
+                count++;
+            }
+            System.out.println(degree);
         } else {
             System.out.println("Error!!");
         }       		
