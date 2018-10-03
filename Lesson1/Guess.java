@@ -11,13 +11,13 @@ public class Guess {
             System.out.print("Input number: ");
             userNumber = input.nextInt();
 
-	    if (userNumber == randomNumber) {
-                System.out.println("Well done!!");
-           } else if (userNumber > randomNumber) {
-                System.out.println("The number is smaller.");
-	    } else {
-                System.out.println("The number is larger.");
-	    }
+	     if (userNumber == randomNumber) {
+                 System.out.println("Well done!!");
+            } else if (userNumber > randomNumber) {
+                 System.out.println("The number is smaller.");
+	     } else {
+                 System.out.println("The number is larger.");
+	     }
         }
         System.out.print ("You have guessed.");
    }
