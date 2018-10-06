@@ -6,6 +6,6 @@ public class CalculatorTest {
         char operation = test.getOperation();
         int number2 = test.getInputNum();
         int result = test.getCalc(number1,number2,operation);
-        System.out.println("Result: "+result);  
+        System.out.println("Result: " + result);  
     }
 }
