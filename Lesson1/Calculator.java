@@ -12,8 +12,6 @@ public class Calculator {
 
         System.out.print("Input second number: ");
         int number2 = input.nextInt();
-        int count = 1;
-        int degree = number1;
         
         if (operation == '+') {
             System.out.println(number1 + number2);
@@ -26,6 +24,8 @@ public class Calculator {
         } else if (operation == '%') {
             System.out.println(number1 % number2);
         } else if (operation == '^') {
+            int count = 1;
+            int degree = number1;
             while (count != number2) {
                 degree = degree * number1;
                 count++;
