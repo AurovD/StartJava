@@ -1,5 +1,3 @@
-import java.util.Scanner; 
-
 public class Calculator {
     public int getCalc(int number1, int number2, char operation){
         int result = 0;
