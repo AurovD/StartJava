@@ -14,8 +14,13 @@ public class CalculatorTest {
         System.out.print("Input number: ");
         int number2 = input.nextInt();
 
-        Calculator test = new Calculator();
-        int result = test.getCalc(number1, number2, operation);
-        System.out.println("Result: " + result);  
+        Calculator testCalc = new Calculator();
+        int result = testCalc.getCalculate(number1, number2, operation);
+        System.out.println("Result: " + result); 
+        
+        System.out.println("Do you want to continue?[yes/no]");
+        String offer = input.nextLine();
+        offer = testCalc.getOffer(offer);
+        System.out.println(offer); 
     }
 }

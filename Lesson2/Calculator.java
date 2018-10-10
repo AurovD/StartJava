@@ -1,5 +1,8 @@
+
+import java.util.Scanner;
+
 public class Calculator {
-    public int getCalc(int number1, int number2, char operation){
+    public int getCalculate(int number1, int number2, char operation){
         int result = 0;
         switch (operation){
             case '+':
@@ -19,17 +22,25 @@ public class Calculator {
                 break;
             case '^':
                 int count = 1;
-                int degree = number1;
                 while (count != number2){
-                    degree = degree * number1;
+                    result = result * number1;
                     count++;
                 }
-                result = degree;
                 break;
             default:
                 System.out.println("Error!!");
         } 
     return result;
     }
+    public void getOffer(String offer) {
+        return offer;
+    }    
+        public void setOffer(String offer){
+            this.offer = offer;
+            while((offer != "yes") & (offer != "no")) {
+                System.out.println("Error");
+            }
+        
+        }
 }
         
