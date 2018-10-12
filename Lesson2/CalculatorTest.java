@@ -17,10 +17,21 @@ public class CalculatorTest {
         Calculator testCalc = new Calculator();
         int result = testCalc.getCalculate(number1, number2, operation);
         System.out.println("Result: " + result); 
-        
-        System.out.println("Do you want to continue?[yes/no]");
-        String offer = input.nextLine();
-        offer = testCalc.getOffer(offer);
-        System.out.println(offer); 
+            
+        do {
+            String offer = new String();
+            System.out.println("Do you want to continue?[yes/no]");
+            offer = input.nextLine();
+            switch (offer){
+            case "yes":
+                System.out.println("OK");
+                break;
+            case "no":
+                System.out.println("OK");
+                break;
+            default:
+                System.out.println("Error!!");
+                }
+            } while((offer != "yes") | (offer != "no"));
     }
 }

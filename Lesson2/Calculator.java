@@ -32,15 +32,5 @@ public class Calculator {
         } 
     return result;
     }
-    public void getOffer(String offer) {
-        return offer;
-    }    
-        public void setOffer(String offer){
-            this.offer = offer;
-            while((offer != "yes") & (offer != "no")) {
-                System.out.println("Error");
-            }
-        
-        }
 }
         
