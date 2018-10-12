@@ -19,7 +19,7 @@ public class CalculatorTest {
         System.out.println("Result: " + result); 
             
         do {
-            String offer = new String();
+            String offer = "";
             System.out.println("Do you want to continue?[yes/no]");
             offer = input.nextLine();
             switch (offer){
