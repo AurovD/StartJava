@@ -2,9 +2,9 @@
 import java.util.Scanner;
 
 public class Calculator {
-    public int getCalculate(int number1, int number2, char operation){
+    public int Calculate(int number1, int number2, char operation){
         int result = 0;
-        switch (operation){
+        switch (operation) {
             case '+':
                 result = number1 + number2;
                 break;

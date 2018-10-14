@@ -14,8 +14,8 @@ public class CalculatorTest {
         System.out.print("Input number: ");
         int number2 = input.nextInt();
 
-        Calculator testCalc = new Calculator();
-        int result = testCalc.getCalculate(number1, number2, operation);
+        Calculator calculator = new Calculator();
+        int result = calculator.Calculate(number1, number2, operation);
         System.out.println("Result: " + result); 
         
         String userAnswer;
@@ -23,13 +23,14 @@ public class CalculatorTest {
         do {
             System.out.println("Do you want to continue?[yes/no]");
             userAnswer = input.next();
-            if (userAnswer.equals("yes")){
-                    System.out.println("OK");
+            if (userAnswer.equals("yes")) {
+                System.out.println("OK");
             } else if (userAnswer.equals("no")) {
-                    System.out.println("OK");
+                System.out.println("OK");
             } else {
-                    System.out.println("Error!!");
+                System.out.println("Error!!");
             }
-            } while (!userAnswer.equals("yes") && !userAnswer.equals("no"));
+            } 
+        while (!userAnswer.equals("yes") && !userAnswer.equals("no"));
     }
 }
