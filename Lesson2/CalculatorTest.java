@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     
-    public static void main(String[] args){ 
+    public static void main(String[] args) { 
         Scanner input = new Scanner(System.in);
 
         System.out.print("Input number: ");
@@ -23,16 +23,13 @@ public class CalculatorTest {
         do {
             System.out.println("Do you want to continue?[yes/no]");
             userAnswer = input.next();
-            switch (userAnswer){
-            case "yes":
-                System.out.println("OK");
-                break;
-            case "no":
-                System.out.println("OK");
-                break;
-            default:
-                System.out.println("Error!!");
-                }
-            } while (!(userAnswer.equals("yes")) && !(userAnswer.equals("no")));
+            if (userAnswer.equals("yes")){
+                    System.out.println("OK");
+            } else if (userAnswer.equals("no")) {
+                    System.out.println("OK");
+            } else {
+                    System.out.println("Error!!");
+            }
+            } while (!userAnswer.equals("yes") && !userAnswer.equals("no"));
     }
 }
