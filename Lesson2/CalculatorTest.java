@@ -30,7 +30,7 @@ public class CalculatorTest {
             } else {
                 System.out.println("Error!!");
             }
-            } 
+        }
         while (!userAnswer.equals("yes") && !userAnswer.equals("no"));
     }
 }
