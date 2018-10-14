@@ -17,12 +17,13 @@ public class CalculatorTest {
         Calculator testCalc = new Calculator();
         int result = testCalc.getCalculate(number1, number2, operation);
         System.out.println("Result: " + result); 
-            
+        
+        String userAnswer;
+        
         do {
-            String offer = "";
             System.out.println("Do you want to continue?[yes/no]");
-            offer = input.nextLine();
-            switch (offer){
+            userAnswer = input.next();
+            switch (userAnswer){
             case "yes":
                 System.out.println("OK");
                 break;
@@ -32,6 +33,6 @@ public class CalculatorTest {
             default:
                 System.out.println("Error!!");
                 }
-            } while((offer != "yes") | (offer != "no"));
+            } while (!(userAnswer.equals("yes")) && !(userAnswer.equals("no")));
     }
 }

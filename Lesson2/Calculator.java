@@ -23,14 +23,14 @@ public class Calculator {
             case '^':
                 int count = 1;
                 while (count != number2){
-                    result = result * number1;
+                    result *= number1;
                     count++;
                 }
                 break;
             default:
                 System.out.println("Error!!");
         } 
-    return result;
+        return result;
     }
 }
         
