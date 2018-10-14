@@ -1,5 +1,5 @@
 
-public class Jeager{
+public class Jeager {
     private String modelName;
     private String mark;
     private String status;
@@ -9,5 +9,19 @@ public class Jeager{
     private int speed;
     private int strength;
     private int armor;
+    private String weapon;
+    private String opSystem;
+ 
+
+    public String getModelName() {
+        modelName = "Tacit Ronin";
+        return modelName;
+    }
+    void setModelName(String modelName) {
+          
+        this.modelName = modelName;
+    }
 }
+
+
       
