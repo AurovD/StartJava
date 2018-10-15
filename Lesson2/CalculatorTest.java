@@ -32,7 +32,6 @@ public class CalculatorTest {
         } else {
             System.out.println("Error!!");
         }
-        }
-        while (!userAnswer.equals("no"));
+        } while (!userAnswer.equals("no"));
     }
 }
