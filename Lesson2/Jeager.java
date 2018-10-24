@@ -14,11 +14,11 @@ public class Jeager {
     private String opSystem;
 
     public String getModelName() {
-        modelName = "Tacit Ronin";
         return modelName;
     }
 
     void setModelName(String modelName) {
+        modelName = "Tacit Ronin";
         this.modelName = modelName;
     }
 }
