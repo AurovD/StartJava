@@ -1,7 +1,7 @@
 
 public class Calculator {
 
-    public int calculate(int number1, int number2, char operation) {
+    public int Calculate(int number1, int number2, char operation) {
         int result = 0;
         switch (operation) {
             case '+':
