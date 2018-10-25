@@ -18,7 +18,8 @@ public class Jeager {
     }
 
     void setModelName(String modelName) {
-        modelName = "Tacit Ronin";
         this.modelName = modelName;
     }
 }
+
+
