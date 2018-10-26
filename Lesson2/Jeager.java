@@ -20,6 +20,9 @@ public class Jeager {
     void setModelName(String modelName) {
         this.modelName = modelName;
     }
+    public String getMark() {
+        return mark;
+}
 }
 
 
