@@ -20,10 +20,8 @@ public class Calculator {
                 result = number1 % number2;
                 break;
             case '^':
-                int count = 1;
-                while (count != number2) {
+                for (int count = 1; count <= number2; count++) {
                     result *= number1;
-                    count++;
                 }
                 break;
             default:
