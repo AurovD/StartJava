@@ -20,7 +20,7 @@ public class Calculator {
                 result = number1 % number2;
                 break;
             case '^':
-                count
+                int count = 1;
                 while (count != number2) {
                     result *= number1;
                     count++;
