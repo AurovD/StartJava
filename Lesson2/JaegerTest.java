@@ -8,19 +8,38 @@ public class JaegerTest {
         jeagerOne.setModelName("Tacit Ronin");
         Jaeger jeagerTwo = new Jaeger();
         jeagerTwo.setModelName("Crimson Typhoon");
-        
+
         Scanner input = new Scanner(System.in);
         System.out.print("Write name of Jaeger: ");
-        String modelName = input.next();
+        String modelName = input.nextLine();
 
-        if (modelName == jeagerOne.getModelName()) {
-            Jaeger markOne = new Jaeger();
-            markOne.setMark("Mark-1");
-            System.out.println(markOne.getMark());
-        } else {
-            Jaeger markTwo = new Jaeger();
-            markTwo.setMark("Mark-1");
-            System.out.println(markTwo.getMark());
+        switch (modelName) {
+            case "Tacit Ronin":
+
+                System.out.println(jeagerOne.getModelName());
+
+                Jaeger markOne = new Jaeger();
+                markOne.setMark("Mark-1");
+                System.out.println("Mark:" + markOne.getMark());
+
+                Jaeger statusOne = new Jaeger();
+                statusOne.setStatus("Destroyed");
+                System.out.println("Status:" + statusOne.getStatus());
+                break;
+            case "Crimson Typhoon":
+                
+                System.out.println(jeagerTwo.getModelName());
+
+                Jaeger markTwo = new Jaeger();
+                markTwo.setMark("Mark-1");
+                System.out.println("Mark: " + markTwo.getMark());
+
+                Jaeger statusTwo = new Jaeger();
+                statusTwo.setStatus("Destroyed");
+                System.out.println("Status: " + statusTwo.getStatus());
+                break;
+            default:
+                System.out.println("Error!!");
         }
     }
 

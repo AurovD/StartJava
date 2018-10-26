@@ -33,7 +33,7 @@ public class Jaeger {
         return status;
     }
 
-    void setStatis(String status) {
+    void setStatus(String status) {
         this.status = status;
     }
 
