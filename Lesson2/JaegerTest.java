@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class JaegerTest {
 
     public static void main(String[] args) {
-        Jaeger jeagerOne = new Jaeger();
-        jeagerOne.setModelName("Tacit Ronin");
-        Jaeger jeagerTwo = new Jaeger();
-        jeagerTwo.setModelName("Crimson Typhoon");
+        Jaeger jaegerOne = new Jaeger();
+        jaegerOne.setModelName("Tacit Ronin");
+        Jaeger jaegerTwo = new Jaeger();
+        jaegerTwo.setModelName("Crimson Typhoon");
 
         Scanner input = new Scanner(System.in);
         System.out.print("Write name of Jaeger: ");
@@ -16,7 +16,7 @@ public class JaegerTest {
         switch (modelName) {
             case "Tacit Ronin":
 
-                System.out.println(jeagerOne.getModelName());
+                System.out.println(jaegerOne.getModelName());
 
                 Jaeger markOne = new Jaeger();
                 markOne.setMark("Mark-1");
@@ -28,7 +28,7 @@ public class JaegerTest {
                 break;
             case "Crimson Typhoon":
                 
-                System.out.println(jeagerTwo.getModelName());
+                System.out.println(jaegerTwo.getModelName());
 
                 Jaeger markTwo = new Jaeger();
                 markTwo.setMark("Mark-1");
