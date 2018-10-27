@@ -15,7 +15,6 @@ public class JaegerTest {
 
         switch (modelName) {
             case "Tacit Ronin":
-
                 System.out.println(jaegerOne.getModelName());
 
                 Jaeger markOne = new Jaeger();
@@ -26,8 +25,7 @@ public class JaegerTest {
                 statusOne.setStatus("Destroyed");
                 System.out.println("Status:" + statusOne.getStatus());
                 break;
-            case "Crimson Typhoon":
-                
+            case "Crimson Typhoon":                
                 System.out.println(jaegerTwo.getModelName());
 
                 Jaeger markTwo = new Jaeger();
