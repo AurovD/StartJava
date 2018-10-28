@@ -7,7 +7,7 @@ public class GuessNumberTest {
         
         Player playerOne = new Player();
         playerOne.setPlayerName();
-        Player playerTwo = new Jaeger();
+        Player playerTwo = new Player();
         playerTwo.setPlayerName();
     }
 }
