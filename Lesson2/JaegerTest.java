@@ -16,25 +16,23 @@ public class JaegerTest {
         switch (modelName) {
             case "Tacit Ronin":
                 System.out.println(jaegerOne.getModelName());
-
-                Jaeger markOne = new Jaeger();
-                markOne.setMark("Mark-1");
-                System.out.println("Mark:" + markOne.getMark());
-
-                Jaeger statusOne = new Jaeger();
-                statusOne.setStatus("Destroyed");
-                System.out.println("Status:" + statusOne.getStatus());
+                
+                jaegerOne.setMark("Mark-1");
+                System.out.println("Mark:" + jaegerOne.getMark());
+                
+                jaegerOne.setStatus("Destroyed");
+                String statusOne = jaegerOne.getStatus();
+                System.out.println("Status:" + statusOne);
                 break;
             case "Crimson Typhoon":                
                 System.out.println(jaegerTwo.getModelName());
 
-                Jaeger markTwo = new Jaeger();
-                markTwo.setMark("Mark-1");
-                System.out.println("Mark: " + markTwo.getMark());
+                jaegerTwo.setMark("Mark-1");
+                System.out.println("Mark:" + jaegerTwo.getMark());
 
-                Jaeger statusTwo = new Jaeger();
-                statusTwo.setStatus("Destroyed");
-                System.out.println("Status: " + statusTwo.getStatus());
+                jaegerOne.setStatus("Destroyed");
+                String statusTwo = jaegerTwo.getStatus();
+                System.out.println("Status:" + statusTwo);
                 break;
             default:
                 System.out.println("Error!!");
