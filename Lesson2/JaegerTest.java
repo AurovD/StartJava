@@ -23,6 +23,15 @@ public class JaegerTest {
                 jaegerOne.setStatus("Destroyed");
                 String statusOne = jaegerOne.getStatus();
                 System.out.println("Status:" + statusOne);
+                
+                jaegerOne.setOrigin("Japan");
+                System.out.println("Origin:" + jaegerOne.getOrigin());
+                
+                jaegerOne.setHeight(74.37);
+                System.out.println("Height(m):" + jaegerOne.getHeight());
+                
+                jaegerOne.setWeight(7.450);
+                System.out.println("Weight(kg):" + jaegerOne.getWeight());
                 break;
             case "Crimson Typhoon":                
                 System.out.println(jaegerTwo.getModelName());
