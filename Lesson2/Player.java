@@ -1,11 +1,7 @@
 public class Player {
-    private String playerName;
+    String playerName;
     
-    public String getPlayerName() {
-        return playerName;
-    }
-
-    void setplayerName(String playerName) {
-        this.playerName = playerName;
+    public Player(String name) {
+        playerName = name;
     }
 }
