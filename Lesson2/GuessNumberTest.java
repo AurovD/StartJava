@@ -19,7 +19,6 @@ public class GuessNumberTest {
                 
         System.out.println("Guess number!!! " + playerOne.playerName + " tries first");
         int userNumber = 0; 
-        int attempt = 0;
         while (randomNumber != userNumber) {
             System.out.print(playerOne.playerName + " input number: ");
             userNumber = input.nextInt();
