@@ -10,8 +10,7 @@ public class GuessNumberTest {
         
         int randomNumber = 0;
         GuessNumber number = new GuessNumber();
-        randomNumber = number.calculate(randomNumber);
-        System.out.println(randomNumber);      
+        randomNumber = number.calculate(randomNumber);     
                 
         int userNumber = 0; 
         while (randomNumber != userNumber) {
