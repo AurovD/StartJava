@@ -17,16 +17,16 @@ public class GuessNumberTest {
         while (randomNumber != userNumber) {
             System.out.print(playerOne.playerName + " input number: ");
             userNumber = input.nextInt();
-                if (randomNumber == userNumber) {
-                  System.out.print ("First player is winner!!");
-                  break;
-                }
+            if (randomNumber == userNumber) {
+                System.out.print ("First player is winner!!");
+                break;
+            }
             System.out.print(playerTwo.playerName + " input number: ");
             userNumber = input.nextInt(); 
                 if (randomNumber == userNumber) {
-                  System.out.print ("Second player is winner!!");
-                  break;
-                }            
+                System.out.print ("Second player is winner!!");
+                break;
+            }            
         }
     }
 }
