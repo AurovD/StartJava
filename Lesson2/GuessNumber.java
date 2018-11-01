@@ -1,7 +1,7 @@
 public class GuessNumber {
-        public int calculate() {
+        public int calculate(int randomNumber) {
         
-            int randomNumber = (int) ( Math.random() * 100 + 1 );
+            randomNumber = (int) ( Math.random() * 100 + 1 );
             return randomNumber;
         }
         
