@@ -21,18 +21,18 @@ public class GuessNumberTest {
         int userNumber = 0; 
         int attempt = 0;
         while (randomNumber != userNumber) {
-                System.out.print(playerOne.playerName + " input number: ");
-                userNumber = input.nextInt();
-                if (randomNumber == userNumber) {
-                    System.out.print (playerOne.playerName + " is a winner!!");
-                    break;
-                }
+            System.out.print(playerOne.playerName + " input number: ");
+            userNumber = input.nextInt();
+            if (randomNumber == userNumber) {
+                System.out.print (playerOne.playerName + " is a winner!!");
+                break;
+            }
 
-                if (userNumber > randomNumber) {
-                    System.out.println("The number is smaller.");
-                } else {
-                    System.out.println("The number is larger.");
-                }
+            if (userNumber > randomNumber) {
+                System.out.println("The number is smaller.");
+            } else {
+                System.out.println("The number is larger.");
+            }
             
             System.out.print(playerTwo.playerName + " input number: ");
             userNumber = input.nextInt(); 
