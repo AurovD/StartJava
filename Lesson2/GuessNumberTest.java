@@ -20,7 +20,7 @@ public class GuessNumberTest {
         System.out.println("Guess number!!! " + playerOne.playerName + " tries first");
         int userNumber = 0; 
         while (randomNumber != userNumber) {
-            System.out.print(playerOne.playerName + " input number: ");
+            System.out.print(playerOne.playerName + " inputs number: ");
             userNumber = input.nextInt();
             if (randomNumber == userNumber) {
                 System.out.print (playerOne.playerName + " is a winner!! Number is " + randomNumber);
@@ -33,7 +33,7 @@ public class GuessNumberTest {
                 System.out.println("The number is larger.");
             }
             
-            System.out.print(playerTwo.playerName + " input number: ");
+            System.out.print(playerTwo.playerName + " inputs number: ");
             userNumber = input.nextInt(); 
             if (randomNumber == userNumber) {
                 System.out.print (playerTwo.playerName + " is a winner!! Number is " + randomNumber);
