@@ -1,49 +1,52 @@
+
 import java.util.Scanner;
 
 public class GuessNumberTest {
 
     public static void main(String[] args) {
-       
-        String userNameOne = "";      
+        System.out.println("First player input your name, please.");
+        String userName = "";
         Player playerNameOne = new Player();
-        userNameOne = playerNameOne.playerNameOne(userNameOne);
-        System.out.println(userNameOne);
-        
-        String userNameTwo = "";
+        String userNameOne = playerNameOne.playerName(userName);
+
+        System.out.println("Second player input your name, please.");
         Player playerNameTwo = new Player();
-        userNameTwo = playerNameTwo.playerNameTwo(userNameTwo);
-        System.out.println(userNameTwo);
-        
+        String userNameTwo = playerNameTwo.playerName(userName);
+
         int randomNumber = 0;
         GuessNumber number = new GuessNumber();
         randomNumber = number.calculateNum(randomNumber);
-        System.out.println(randomNumber);
-        
+
         System.out.println("Guess number!!! " + userNameOne + " tries first");
-        
-        int userNumberOne = 0;
-        int userNumberTwo = 0;
-        while (randomNumber != userNumber) {
+
+        boolean answer = false;
+        int turn = 1;
+
+        while (answer == false) {
+            if (turn % 2 == 1) {
                 System.out.print(userNameOne + " inputs number: ");
-                userNumber = input.nextInt();
-                if (randomNumber == userNumber) {
-                    System.out.print (userNameOne + " is a winner!! Number is " + randomNumber);
-                    break;
-                }
-
-                if (userNumber > randomNumber) {
-                    System.out.println("The number is smaller.");
-                } else {
-                    System.out.println("The number is larger.");
-                }
-
+            } else {
                 System.out.print(userNameTwo + " inputs number: ");
-                userNumber = input.nextInt(); 
-                if (randomNumber == userNumber) {
-                    System.out.print (userNameTwo + " is a winner!! Number is " + randomNumber);
-                    break;
-                }    
-        
+            }
+
+            int userNumber = 0;
+            Player playerNumber = new Player();
+            userNumber = playerNumber.userNumber(userNumber);
+            System.out.println(userNumber);
+
+            GuessNumber playerResult = new GuessNumber();
+            answer = playerResult.guessNumber(answer, randomNumber, userNumber);
+
+            if (answer == true) {
+                if (turn % 2 == 1) {
+                    System.out.print(userNameOne + " is winner. Number was " + randomNumber);
+                } else {
+                    System.out.print(userNameTwo + " is winner. Number was " + randomNumber);
+                }
+                break;
+            }
+            turn += 1;
+        }
+
     }
-        
 }

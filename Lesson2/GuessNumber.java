@@ -1,35 +1,28 @@
+
 import java.util.Scanner;
 
 public class GuessNumber {
-        public int calculateNum(int randomNumber) {
-        
-            randomNumber = (int) ( Math.random() * 100 + 1 );
-            return randomNumber;
-        }
-        public int guessNumber(int randomNumber, String userNameOne, String userNameTwo) { 
-            Scanner input = new Scanner(System.in);
-            while (randomNumber != userNumber) {
-                System.out.print(userNameOne + " inputs number: ");
-                userNumber = input.nextInt();
-                if (randomNumber == userNumber) {
-                    System.out.print (userNameOne + " is a winner!! Number is " + randomNumber);
-                    break;
-                }
 
-                if (userNumber > randomNumber) {
-                    System.out.println("The number is smaller.");
-                } else {
-                    System.out.println("The number is larger.");
-                }
+    public int calculateNum(int randomNumber) {
 
-                System.out.print(userNameTwo + " inputs number: ");
-                userNumber = input.nextInt(); 
-                if (randomNumber == userNumber) {
-                    System.out.print (userNameTwo + " is a winner!! Number is " + randomNumber);
-                    break;
-                }    
+        randomNumber = (int) (Math.random() * 100 + 1);
+        return randomNumber;
+    }
+
+    public boolean guessNumber(boolean answer, int randomNumber, int userNumber) {
+       
+        if (userNumber == randomNumber) {
+                answer = true;
+                System.out.println("Well done!!");
+        } else {
+            answer = false;
+            
+            if (userNumber > randomNumber) {
+                System.out.println("The number is smaller.");
+            } else {
+                System.out.println("The number is larger.");
+            }
         }
-            return
-        }
-        
+    return answer;
+    }
 }
