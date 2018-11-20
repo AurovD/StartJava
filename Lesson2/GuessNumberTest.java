@@ -4,18 +4,21 @@ import java.util.Scanner;
 public class GuessNumberTest {
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
         System.out.println("First player input your name, please.");
-        String userName = "";
-        Player playerNameOne = new Player();
-        String userNameOne = playerNameOne.playerName(userName);
+        String userNameOne = input.nextLine();
+        Player playerOne = new Player();
+        playerOne.setUserName(userNameOne);
 
         System.out.println("Second player input your name, please.");
-        Player playerNameTwo = new Player();
-        String userNameTwo = playerNameTwo.playerName(userName);
+        String userNameTwo = input.nextLine();
+        Player playerTwo = new Player();
+        playerTwo.setUserName(userNameTwo);
 
-        int randomNumber = 0;
-        GuessNumber number = new GuessNumber();
-        randomNumber = number.calculateNum(randomNumber);
+        int randomNumber;
+        GuessNumber guessNumber = new GuessNumber();
+        randomNumber = guessNumber.getRandomNumber();
 
         System.out.println("Guess number!!! " + userNameOne + " tries first");
 
@@ -29,14 +32,11 @@ public class GuessNumberTest {
                 System.out.print(userNameTwo + " inputs number: ");
             }
 
-            int userNumber = 0;
-            Player playerNumber = new Player();
-            userNumber = playerNumber.userNumber(userNumber);
+            int userNumber = guessNumber.getUserNumber();
             System.out.println(userNumber);
 
-            GuessNumber playerResult = new GuessNumber();
-            answer = playerResult.guessNumber(answer, randomNumber, userNumber);
-
+            answer = guessNumber.getAnswer();
+            
             if (answer == true) {
                 if (turn % 2 == 1) {
                     System.out.print(userNameOne + " is winner. Number was " + randomNumber);

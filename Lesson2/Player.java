@@ -1,16 +1,17 @@
+
 import java.util.Scanner;
 
-public class Player  {
-    Scanner input = new Scanner(System.in);
-    public String playerName(String userName) {
-        userName = input.nextLine(); 
+public class Player {
+
+    private String userName;
+    private int userNumber;
+
+    public String getUserName() {
         return userName;
     }
-    
-    
-    public int userNumber(int userNumber) {
-        userNumber= input.nextInt(); 
-        return userNumber;
+
+    void setUserName(String userName) {
+        this.userName = userName;
     }
 }
 
