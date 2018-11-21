@@ -13,5 +13,15 @@ public class Player {
     void setUserName(String userName) {
         this.userName = userName;
     }
+    
+    public int getUserNumber() {
+        GuessNumber guessNumber = new GuessNumber();
+        userNumber = guessNumber.getUserInputNumber();
+        return userNumber;
+    }
+
+    void setUserNumber(int userNumber) {
+        this.userNumber = userNumber;
+    }
 }
 

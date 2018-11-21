@@ -20,32 +20,30 @@ public class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber();
         randomNumber = guessNumber.getRandomNumber();
 
-        System.out.println("Guess number!!! " + userNameOne + " tries first");
+        System.out.println("Guess number!!! ");
 
         boolean answer = false;
-        int turn = 1;
 
         while (answer == false) {
-            if (turn % 2 == 1) {
-                System.out.print(userNameOne + " inputs number: ");
-            } else {
-                System.out.print(userNameTwo + " inputs number: ");
-            }
+            System.out.print(userNameOne + " inputs number: ");
+            int userNumberOne = playerOne.getUserNumber();
 
-            int userNumber = guessNumber.getUserNumber();
-            System.out.println(userNumber);
+            System.out.print(userNameTwo + " inputs number: ");
+            int userNumberTwo = playerTwo.getUserNumber();
 
-            answer = guessNumber.getAnswer();
-            
+            answer = guessNumber.getAnswer(userNumberOne, userNumberTwo, userNameOne, userNameTwo);
+
             if (answer == true) {
-                if (turn % 2 == 1) {
-                    System.out.print(userNameOne + " is winner. Number was " + randomNumber);
-                } else {
-                    System.out.print(userNameTwo + " is winner. Number was " + randomNumber);
-                }
                 break;
             }
-            turn += 1;
+
+            if ((userNumberOne > randomNumber) && (userNumberTwo > randomNumber)) {
+                System.out.println("The number is smaller than both.");
+            } else if ((userNumberOne < randomNumber) && (userNumberTwo < randomNumber)) {
+                System.out.println("The number is larger than both.");
+            } else {
+                System.out.println("The number is somewhere between " + userNumberOne + " and " + userNumberTwo);
+            }
         }
 
     }
