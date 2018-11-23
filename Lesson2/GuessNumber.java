@@ -3,46 +3,32 @@ import java.util.Scanner;
 
 public class GuessNumber {
 
-    private int randomNumber;
-    private int userInputNumber;
-    private boolean answer;
+    int randomNumber;
+    int userNumber;
+    boolean answer;
 
-    public int getRandomNumber() {
+    public GuessNumber() {
 
         randomNumber = (int) (Math.random() * 100 + 1);
-        return randomNumber;
-    }
+        System.out.println(randomNumber);
 
-    void setRandomNumber(int randomNumber) {
-        this.randomNumber = randomNumber;
-    }
+        answer = false;
 
-    public int getUserInputNumber() {
-        Scanner input = new Scanner(System.in);
-        userInputNumber = input.nextInt();
-        return userInputNumber;
-    }
+        while (answer == false) {
 
-    void setUserInputNumber(int userInputNumber) {
-        this.userInputNumber = userInputNumber;
-    }
+            System.out.print(" Please, input number: ");
+            Scanner input = new Scanner(System.in);
+            userNumber = input.nextInt();
 
-    public boolean getAnswer(int userNumberOne, int userNumberTwo, String userNameOne, String userNameTwo) {
-        if (userNumberOne == randomNumber) {
-            answer = true;
-            System.out.println("Well done!!");
-            System.out.print(userNameOne + " is winner. Number was " + randomNumber);
-        } else if (userNumberTwo == randomNumber) {
-            answer = true;
-            System.out.println("Well done!!");
-            System.out.print(userNameTwo + " is winner. Number was " + randomNumber);
+            if (userNumber == randomNumber) {
+                answer = true;
+                System.out.println("Well done!!");
+                break;
+            } else if (userNumber > randomNumber) {
+                System.out.println("The number is smaller.");
+            } else {
+                System.out.println("The number is larger.");
+            }
         }
-
-        return answer;
     }
-
-    void setAnswer(boolean answer) {
-        this.answer = answer;
-    }
-
 }
