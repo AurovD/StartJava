@@ -15,12 +15,6 @@ public class GuessNumberTest {
         Player playerTwo = new Player(userNameTwo);
 
         System.out.println("Guess number!!! ");
-
-        boolean answer = false;
-        int turn = 1;
-        GuessNumber guessNumber = new GuessNumber();
-        int randomNumber = guessNumber.randomNumber;
-        
-            
+            GuessNumber guessNumber = new GuessNumber(userNameTwo, userNameOne);    
     }
 }
