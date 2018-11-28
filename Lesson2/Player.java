@@ -4,8 +4,10 @@ import java.util.Scanner;
 public class Player {
 
     private String userName;
+    private int number;
+    
     public Player(String userName) {
-        userName = "";       
+        this.userName = userName;       
     }
     
 

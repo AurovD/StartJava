@@ -3,42 +3,27 @@ import java.util.Scanner;
 
 public class GuessNumber {
 
-    private int randomNumber;
     private int userNumber;
-
-    public GuessNumber(String userNameTwo, String userNameOne) {
+    private int randomNumber;
+    
+    public GuessNumber(int randomNumber) {
         randomNumber = (int) (Math.random() * 100 + 1);
-        System.out.println(randomNumber);
+    }
+    
+    
 
-        boolean answer = false;
-        int turn = 1;
+    public boolean guessNumber(boolean answer, int randomNumber, int userNumber) {
 
-        while (answer == false) {
-            if (turn % 2 == 1) {
-                System.out.println(userNameOne + " tries to guess the number: ");
-                Scanner input = new Scanner(System.in);
-                userNumber = input.nextInt();
-            } else {
-                System.out.println(userNameTwo + " tries to guess the number: ");
-                Scanner input = new Scanner(System.in);
-                userNumber = input.nextInt();
-            }
-
+        
             if (userNumber == randomNumber) {
                 answer = true;
                 System.out.println("Well done!!");
-                if (turn % 2 == 1) {
-                    System.out.println(userNameOne + " is a winner!!");
-                } else {
-                    System.out.println(userNameTwo + " is a winner");
-                }
-                break;
+                
             } else if (userNumber > randomNumber) {
                 System.out.println("The number is smaller.");
             } else {
                 System.out.println("The number is larger.");
             }
-            turn += 1;
-        }
+        return answer;
     }
 }
