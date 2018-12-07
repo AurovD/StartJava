@@ -10,6 +10,9 @@ public class Player {
         this.userName = userName;       
     }
     
+    public Number() {
+    }
+    
 
 }
 
