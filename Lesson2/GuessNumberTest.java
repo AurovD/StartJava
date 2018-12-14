@@ -20,6 +20,26 @@ public class GuessNumberTest {
         GuessNumber game = new GuessNumber();
         randomNumber = game.GuessNumber(randomNumber);
         System.out.println("First player inputs number first");
+        do {
+        
+        boolean answer = game.GuessNumber(userPlayerOne, userPlayerTwo, randomNumber);
+        
+       
+            
+            do {    
+                System.out.println("Do you want to continue?[yes/no]");
+                userAnswer = input.next();
+                if (userAnswer.equals("yes")) {
+                    System.out.println("Guess number!!!");
+                } else if (userAnswer.equals("no")) {
+                    System.out.println("Bye");
+                    break;
+                } else {
+                    System.out.println("Error!!");
+                }
+            } while (!userAnswer.equals("yes"));
+        } while (!userAnswer.equals("no"));
+        
        
     }
 }
