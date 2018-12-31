@@ -6,10 +6,12 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String userAnswer;
+        Calculator calculator = new Calculator();
         do {
 
             System.out.print("Input number: ");
             int number1 = input.nextInt();
+            
 
             System.out.print("Choose operation (+, -, *, /, ^, %): ");
             char operation = input.next().charAt(0);
@@ -17,7 +19,6 @@ public class CalculatorTest {
             System.out.print("Input number: ");
             int number2 = input.nextInt();
 
-            Calculator calculator = new Calculator();
             int result = calculator.calculate(number1, number2, operation);
             System.out.println("Result: " + result);
 
