@@ -16,21 +16,19 @@ public class GuessNumberTest {
 
         System.out.println("Guess number!!!");
         
-        int randomNumber = 0;
-        GuessNumber game = new GuessNumber();
-        randomNumber = game.GuessNumber(randomNumber);
+        GuessNumber guessNumberGame = new GuessNumber(userPlayerOne, userPlayerTwo);
         System.out.println("First player inputs number first");
+        
+        String userAnswer;
+        
         do {
-        
-        boolean answer = game.GuessNumber(userPlayerOne, userPlayerTwo, randomNumber);
-        
-       
+            guessNumberGame.startGame();
             
             do {    
                 System.out.println("Do you want to continue?[yes/no]");
                 userAnswer = input.next();
                 if (userAnswer.equals("yes")) {
-                    System.out.println("Guess number!!!");
+                    System.out.println("Let's play again!!!");
                 } else if (userAnswer.equals("no")) {
                     System.out.println("Bye");
                     break;
