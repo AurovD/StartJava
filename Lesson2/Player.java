@@ -1,5 +1,4 @@
 
-import java.util.Scanner;
 
 public class Player {
 
@@ -29,7 +28,5 @@ public class Player {
 	public void setUserNumber(int userNumber) {
 		this.userNumber= userNumber;
 	}
-    
-
 }
 
