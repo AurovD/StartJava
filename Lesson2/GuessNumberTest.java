@@ -19,8 +19,8 @@ public class GuessNumberTest {
         String userAnswer;
         
         do {
-            guessNumberGame.startGame();
             System.out.println("First player inputs his number first");
+            guessNumberGame.startGame();
             
             do {    
                 System.out.println("Do you want to continue?[yes/no]");
