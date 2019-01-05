@@ -34,8 +34,6 @@ public class GuessNumberTest {
                     System.out.println("Error!!");
                 }
             } while (!userAnswer.equals("yes"));
-        } while (!userAnswer.equals("no"));
-        
-       
+        } while (!userAnswer.equals("no"));   
     }
 }
