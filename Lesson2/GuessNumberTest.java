@@ -15,12 +15,12 @@ public class GuessNumberTest {
         System.out.println("Guess number!!!");
         
         GuessNumber guessNumberGame = new GuessNumber(userPlayerOne, userPlayerTwo);
-        System.out.println("First player inputs number first");
-        
+                
         String userAnswer;
         
         do {
             guessNumberGame.startGame();
+            System.out.println("First player inputs number first");
             
             do {    
                 System.out.println("Do you want to continue?[yes/no]");
