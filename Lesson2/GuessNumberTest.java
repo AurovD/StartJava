@@ -12,7 +12,7 @@ public class GuessNumberTest {
         System.out.println("Second player input your name, please.");
         Player userPlayerTwo = new Player(input.next());
 
-        System.out.println("Guess number!!!");
+        System.out.println("Try guess number!!!");
         
         GuessNumber guessNumberGame = new GuessNumber(userPlayerOne, userPlayerTwo);
                 
@@ -20,7 +20,7 @@ public class GuessNumberTest {
         
         do {
             guessNumberGame.startGame();
-            System.out.println("First player inputs number first");
+            System.out.println("First player inputs his number first");
             
             do {    
                 System.out.println("Do you want to continue?[yes/no]");
