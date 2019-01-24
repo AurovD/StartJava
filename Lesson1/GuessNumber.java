@@ -3,16 +3,6 @@ import java.util.Scanner;
 
 public class GuessNumber {
 
-    Scanner scan = new Scanner(System.in);
-    private Player userPlayerOne;
-    private Player userPlayerTwo;
-
-    public GuessNumber(Player userPlayerOne, Player userPlayerTwo) {
-        this.userPlayerOne = userPlayerOne;
-        this.userPlayerTwo = userPlayerTwo;
-    }
-
-    public void startGame() {
 
         int randomNumber = (int) (Math.random() * 100 + 1);
         
@@ -42,5 +32,18 @@ public class GuessNumber {
                 System.out.println("The number is larger.");
             }
         } while (userPlayerOne.getNumber() != randomNumber && userPlayerTwo.getNumber() != randomNumber);   
+     
+    System.out.println("Do you want to continue?[yes/no]");
+                userAnswer = input.next();
+                if (userAnswer.equals("yes")) {
+                    System.out.println("Let's play again!!!");
+                } else if (userAnswer.equals("no")) {
+                    System.out.println("Bye");
+                    break;
+                } else {
+                    System.out.println("Error!!");
+                }
+            } while (!userAnswer.equals("yes"));
+        } while (!userAnswer.equals("no"));  
     }
 }
