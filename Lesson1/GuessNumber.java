@@ -21,28 +21,28 @@ public class GuessNumber {
      
             do {
                 System.out.println(namePlayerOne + ", please, try to guess the number: ");
-                userPlayerOne.setUserNumber(input.nextInt());
+                userNumber = scan.nextInt();
 
-                if (userPlayerOne.getUserNumber() == randomNumber) {
+                if (userNumber == randomNumber) {
                     System.out.println("Well done!!");
-                    System.out.println(userPlayerOne.getUserName() + " wins!!");
-                } else if (userPlayerOne.getUserNumber() > randomNumber) {
+                    System.out.println(namePlayerTwo + " wins!!");
+                } else if (userNumber > randomNumber) {
                     System.out.println("The number is smaller.");
                 } else {
                     System.out.println("The number is larger.");
                 }
 
-                System.out.println(userPlayerTwo.getUserName() + " tries to guess the number: ");
-                userPlayerTwo.setUserNumber(input.nextInt());
+                System.out.println(namePlayerTwo + " tries to guess the number: ");
+                userNumber = scan.nextInt();
 
-                if (userPlayerTwo.getUserNumber() == randomNumber) {
+                if (userNumber == randomNumber) {
                     System.out.println("Well done!!");
-                    System.out.println(userPlayerTwo.getUserName() + " wins!!");
-                } else if (userPlayerTwo.getUserNumber() > randomNumber) {
+                    System.out.println(namePlayerTwo + " wins!!");
+                } else if (userNumber > randomNumber) {
                     System.out.println("The number is smaller.");
                 } else {
                     System.out.println("The number is larger.");
                 }
-            } while (userPlayerOne.getUserNumber() != randomNumber && userPlayerTwo.getUserNumber() != randomNumber);   
+            } while (userNumber != randomNumber);   
     }
 }
