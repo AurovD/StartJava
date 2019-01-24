@@ -8,22 +8,18 @@ public class GuessNumber {
 
         int userNumber = 0;
         String userAnswer;
+        
         System.out.println("First player input your name, please.");
-
         String userNameFirst = scan.next();
-
         System.out.println("Second player, please, input your number");
-
         String userNameSecond = scan.next();
 
         int randomNumber = (int) (Math.random() * 100 + 1);
 
         System.out.println("Try guess number!!!");
         do {
-
             do {
                 System.out.println(userNameFirst + " inputs his number first");
-
                 userNumber = scan.nextInt();
 
                 if (userNumber == randomNumber) {
