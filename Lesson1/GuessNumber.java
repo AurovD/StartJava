@@ -60,6 +60,5 @@ public class GuessNumber {
                 System.out.println("Error!!");
             }
         } while (userAnswer.equals("yes"));
-
     }
 }
