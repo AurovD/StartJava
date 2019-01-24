@@ -1,42 +1,29 @@
 
 import java.util.Scanner;
 
-public class GuessNumber {
-        Scanner input = new Scanner(System.in);
-        System.out.println("First player pleases input your name");
-        String 
-        
+public class GuessNumberTest {
 
-        int randomNumber = (int) (Math.random() * 100 + 1);
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("First player input your name, please.");
+        Player userPlayerOne = new Player(input.next());
+
+        System.out.println("Second player input your name, please.");
+        Player userPlayerTwo = new Player(input.next());
+
+        System.out.println("Try guess number!!!");
+        
+        GuessNumber guessNumberGame = new GuessNumber(userPlayerOne, userPlayerTwo);
+                
+        String userAnswer;
         
         do {
-
-            System.out.println(userPlayerOne.getUserName + ", please, try to guess the number: ");
-            userPlayerOne.setUserNumber(scan.nextInt());
-
-            if (userPlayerOne.getUserNumber == randomNumber) {
-                System.out.println("Well done!!");
-                System.out.println(userPlayerOne.getUserName + "wins!!");
-            } else if (userPlayerOne.getUserNumber > randomNumber) {
-                System.out.println("The number is smaller.");
-            } else {
-                System.out.println("The number is larger.");
-            }
-
-            System.out.println(userPlayerTwo + " tries to guess the number: ");
-            userPlayerTwo.setUserNumber(scan.nextInt());
-
-            if (userPlayerTwo.getUserNumber == randomNumber) {
-                System.out.println("Well done!!");
-                System.out.println(userPlayerTwo.getUserName + "wins!!");
-            } else if (userPlayerTwo.getUserNumber > randomNumber) {
-                System.out.println("The number is smaller.");
-            } else {
-                System.out.println("The number is larger.");
-            }
-        } while (userPlayerOne.getNumber() != randomNumber && userPlayerTwo.getNumber() != randomNumber);   
-     
-    System.out.println("Do you want to continue?[yes/no]");
+            System.out.println("First player inputs his number first");
+            guessNumberGame.startGame();
+            
+            do {    
+                System.out.println("Do you want to continue?[yes/no]");
                 userAnswer = input.next();
                 if (userAnswer.equals("yes")) {
                     System.out.println("Let's play again!!!");
@@ -47,6 +34,6 @@ public class GuessNumber {
                     System.out.println("Error!!");
                 }
             } while (!userAnswer.equals("yes"));
-        } while (!userAnswer.equals("no"));  
+        } while (!userAnswer.equals("no"));   
     }
 }
