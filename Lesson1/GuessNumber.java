@@ -12,7 +12,7 @@ public class GuessNumber {
         System.out.println("First player input your name, please.");
         String namePlayerOne = scan.next();
 
-        System.out.println("First player input your name, please.");
+        System.out.println("Second player input your name, please.");
         String namePlayerTwo = scan.next();
 
         int randomNumber = (int) (Math.random() * 100 + 1);
