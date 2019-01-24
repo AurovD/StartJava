@@ -17,8 +17,6 @@ public class GuessNumber {
 
         int randomNumber = (int) (Math.random() * 100 + 1);
 
-        System.out.println(randomNumber);
-
         do {
             System.out.println("Try guess number!!!");
             System.out.println("First player inputs his number first");
