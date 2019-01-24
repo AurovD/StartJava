@@ -1,5 +1,4 @@
 
-
 import java.util.Scanner;
 
 public class GuessNumber {
@@ -18,6 +17,8 @@ public class GuessNumber {
 
         int randomNumber = (int) (Math.random() * 100 + 1);
 
+        System.out.println(randomNumber);
+
         do {
             System.out.println("Try guess number!!!");
             System.out.println("First player inputs his number first");
@@ -29,6 +30,7 @@ public class GuessNumber {
                 if (userNumber == randomNumber) {
                     System.out.println("Well done!!");
                     System.out.println(namePlayerTwo + " wins!!");
+                    break;
                 } else if (userNumber > randomNumber) {
                     System.out.println("The number is smaller.");
                 } else {
@@ -47,33 +49,17 @@ public class GuessNumber {
                 }
             } while (userNumber != randomNumber);
 
-               System.out.println(namePlayerTwo + " tries to guess the number: ");
-                userNumber = scan.nextInt();
+            System.out.println("Do you want to continue?[yes/no]");
+            userAnswer = scan.next();
+            if (userAnswer.equals("yes")) {
+                System.out.println("Let's play again!!!");
+            } else if (userAnswer.equals("no")) {
+                System.out.println("Bye");
+                break;
+            } else {
+                System.out.println("Error!!");
+            }
+        } while (userAnswer.equals("yes"));
 
-                if (userNumber == randomNumber) {
-                    System.out.println("Well done!!");
-                    System.out.println(namePlayerTwo + " wins!!");
-                } else if (userNumber > randomNumber) {
-                    System.out.println("The number is smaller.");
-                } else {
-                    System.out.println("The number is larger.");
-                }
-            } while (userNumber != randomNumber);
-
-
-            do {
-                System.out.println("Do you want to continue?[yes/no]");
-                userAnswer = scan.next();
-                if (userAnswer.equals("yes")) {
-                    System.out.println("Let's play again!!!");
-                } else if (userAnswer.equals("no")) {
-                    System.out.println("Bye");
-                    break;
-                } else {
-                    System.out.println("Error!!");
-                }
-            } while (!userAnswer.equals("yes"));
-        
     }
 }
-
