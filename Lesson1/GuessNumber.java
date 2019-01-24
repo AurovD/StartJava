@@ -2,7 +2,10 @@
 import java.util.Scanner;
 
 public class GuessNumber {
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("First player pleases input your name");
+        String 
+        
 
         int randomNumber = (int) (Math.random() * 100 + 1);
         
