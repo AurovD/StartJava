@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 public class GuessNumber {
@@ -33,7 +34,6 @@ public class GuessNumber {
                 } else {
                     System.out.println("The number is larger.");
                 }
-
                 System.out.println(namePlayerTwo + " tries to guess the number: ");
                 userNumber = scan.nextInt();
 
@@ -47,6 +47,20 @@ public class GuessNumber {
                 }
             } while (userNumber != randomNumber);
 
+               System.out.println(namePlayerTwo + " tries to guess the number: ");
+                userNumber = scan.nextInt();
+
+                if (userNumber == randomNumber) {
+                    System.out.println("Well done!!");
+                    System.out.println(namePlayerTwo + " wins!!");
+                } else if (userNumber > randomNumber) {
+                    System.out.println("The number is smaller.");
+                } else {
+                    System.out.println("The number is larger.");
+                }
+            } while (userNumber != randomNumber);
+
+
             do {
                 System.out.println("Do you want to continue?[yes/no]");
                 userAnswer = scan.next();
@@ -59,7 +73,7 @@ public class GuessNumber {
                     System.out.println("Error!!");
                 }
             } while (!userAnswer.equals("yes"));
-        } while (!userAnswer.equals("no"));
+        
     }
 }
 
