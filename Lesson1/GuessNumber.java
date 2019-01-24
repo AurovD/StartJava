@@ -45,8 +45,6 @@ public class GuessNumber {
 
             } while (userNumber != randomNumber);
 
-
-
             System.out.println("Do you want to continue?[yes/no]");
             userAnswer = scan.next();
             if (userAnswer.equals("yes")) {
